@@ -1,0 +1,148 @@
+@font-face {
+    src: url(font/ClashGrotesk-Extralight.otf);
+    font-family: 'Clash';
+    font-weight: 200;
+}
+@font-face {
+    src: url(font/ClashGrotesk-Regular.otf);
+    font-family: 'Clash';
+    font-weight: 400;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Clash, sans-serif;
+    letter-spacing: 4px;
+    color: white;
+    font-size: 1.2rem;
+}
+/* HEADER / NAV */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem 7rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+header a:hover {
+    text-decoration: underline;
+}
+#logo {
+    width: 55px;
+}
+#menuBtn, #cancelBtn {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    header {
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.70);
+        right: -100%;
+        transition: 0.5s;
+        box-shadow: none;
+    }
+    nav {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    #menuBtn {
+        display: block;
+        width: 50px;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 3;
+        cursor: pointer;
+    }
+    #cancelBtn {
+        width: 50px;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 3;
+        cursor: pointer;
+    }
+}
+
+#welcome {
+    background-image: url(images/lake.jpg);
+    background-size: cover;
+    min-height: 100svh;
+    width: 100%;
+    text-align: center;
+}
+.main-start {
+    text-align: center;
+    padding: 20rem 0 0 0;
+}
+.h1border {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+h1 {
+    font-weight: 800;
+}
+.main-start h2 {
+    padding-top: 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 2px 7px black;
+    font-weight: 400;
+}
+#exploreBtn {
+    width: 170px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: 50px;
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+#exploreBtn:hover {
+    background: white;
+    color: black;
+    text-shadow: none;
+}
+#exploreBtn:active {
+    background: #bbbbbb;
+    border: 2px solid #bbbbbb;
+}

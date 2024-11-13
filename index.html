@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"></head>
+<body>
+    <div class="navbtn">
+        <img id="menuBtn" src="images/menu.png">
+        <img id="cancelBtn" src="images/cancel.png">
+    </div>
+    <header id="header">
+        <nav>
+            <img id="logo" src="images/logo.png">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ANGEBOT</a></li>
+                <li><a href="#">PREISE</a></li>
+                <li><a href="#">KONTAKT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="welcome">
+        <div class="main-start">
+            <div class="h1border">
+                <h1>SWITZERLAND</h1>
+            </div>
+            <h2>EXPLORE THE MOST BEAUTIFUL AND UNTOUCHED PLACES IN THE SWISS ALPS</h2>
+        </div>
+        <button id="exploreBtn">EXPLORE</button>
+    </section>
+    <section id="welcome">
+        <div class="main-start">
+            <div class="h1border">
+                <h1>SWITZERLAND</h1>
+            </div>
+            <h2>EXPLORE THE MOST BEAUTIFUL AND UNTOUCHED PLACES IN THE SWISS ALPS</h2>
+        </div>
+        <button id="exploreBtn">EXPLORE</button>
+    </section>
+    
+    <script>
+        const menuBtn = document.getElementById('menuBtn')
+        const cancelBtn = document.getElementById('cancelBtn')
+        const header = document.getElementById('header')
+
+        menuBtn.addEventListener('click', function() {
+            menuBtn.style.display = 'none';
+            cancelBtn.style.display = 'block';
+            header.style.right = '0';
+        })
+        cancelBtn.addEventListener('click', function() {
+            cancelBtn.style.display = 'none';
+            menuBtn.style.display = 'block';
+            header.style.right = '-100%'
+        })
+    </script>
+</body>
+</html>
